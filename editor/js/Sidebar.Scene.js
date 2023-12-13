@@ -252,6 +252,7 @@ function SidebarScene( editor ) {
 
 	function onEnvironmentChanged() {
 
+		console.log(environmentEquirectangularTexture.getValue())
 		signals.sceneEnvironmentChanged.dispatch(
 			environmentType.getValue(),
 			environmentEquirectangularTexture.getValue()
@@ -419,6 +420,7 @@ function SidebarScene( editor ) {
 
 		if ( scene.environment ) {
 
+			console.log(scene.environment)
 			if ( scene.environment.mapping === THREE.EquirectangularReflectionMapping ) {
 
 				environmentType.setValue( 'Equirectangular' );

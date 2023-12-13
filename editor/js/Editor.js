@@ -663,6 +663,8 @@ Editor.prototype = {
 
 		if ( json.environment === 'ModelViewer' ) {
 
+
+			console.log(json.environment)
 			this.signals.sceneEnvironmentChanged.dispatch( json.environment );
 			this.signals.refreshSidebarEnvironment.dispatch();
 

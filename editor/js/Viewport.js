@@ -517,7 +517,7 @@ function Viewport( editor ) {
 			case 'Equirectangular':
 
 				if ( backgroundEquirectangularTexture ) {
-
+console.log(backgroundEquirectangularTexture)
 					backgroundEquirectangularTexture.mapping = THREE.EquirectangularReflectionMapping;
 					scene.background = backgroundEquirectangularTexture;
 					scene.backgroundBlurriness = backgroundBlurriness;
@@ -550,6 +550,8 @@ function Viewport( editor ) {
 				scene.environment = null;
 
 				if ( environmentEquirectangularTexture ) {
+					console.log(environmentEquirectangularTexture)
+					console.log(THREE.EquirectangularReflectionMapping)
 
 					environmentEquirectangularTexture.mapping = THREE.EquirectangularReflectionMapping;
 					scene.environment = environmentEquirectangularTexture;
@@ -569,6 +571,7 @@ function Viewport( editor ) {
 		render();
 
 	} );
+	console.log(signals.sceneEnvironmentChanged)
 
 	// fog
 
